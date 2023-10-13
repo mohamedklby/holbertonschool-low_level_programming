@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -o "C" | grep $CFILE
+export $CFILE=0-main.c
