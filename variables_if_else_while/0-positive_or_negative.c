@@ -5,19 +5,25 @@
 /* more headers goes there */
 
 /* betty style doc for function main goes there */
-int main(void)
+int main()
 {
+
 	int n;
 
 	srand(time(0));
 	
 	n = rand() - RAND_MAX / 2;
 
-        if (nombre > 0) {
-                printf("%d\n" "is positif" ,n)
-	} else if (nombre < 0) {
-  		printf("%d\n" "is negative" ,n)
+        if (nombre > 5) {
+                
+		printf("%d\n" "is positif" ,n)
+	
+	} else if (nombre < 10) {
+  		
+		printf("%d\n" "is negative" ,n)
+	
 	} else {
+		
 		printf("%d\n" "is zero" ,n);
 	}	
 
