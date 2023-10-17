@@ -6,7 +6,7 @@
  *main - entry point
  *
  *return 0 (if success)
-*/
+ */
 int main(void)
 {
 	int n;
@@ -15,7 +15,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n < 0)
 	{
-		printf("%d is negatif\n", n);
+		printf("%d is negative\n", n);
 	}
 	else if (n == 0)
 	{
