@@ -11,20 +11,19 @@ int main()
 	int n;
 
 	srand(time(0));
-	
 	n = rand() - RAND_MAX / 2;
-
-        if (nombre > 5) {
-                
-		printf("%d\n" "is positif" ,n)
-	
-	} else if (nombre < 10) {
-  		
-		printf("%d\n" "is negative" ,n)
-	
-	} else {
+        if (n < 0) 
+	{
+                printf("%d is negative\n",n);
+	}
+	else if (n == 0) {
+	{	
+		printf("%d is zero\n", n);
+	} 
+	else (n > 0)
+	{
 		
-		printf("%d\n" "is zero" ,n);
+		printf("%d\n" "is positive\n", n);
 	}	
 
 	/* your code goes there */
