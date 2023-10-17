@@ -19,7 +19,7 @@ int main(void)
 
 	if (d > 5)
 	{
-		printf("last digit of %d is %d and is grater than 5\n", n, d);
+		printf("last digit of %d is %d and is greater than 5\n", n, d);
 	}
 	else if (d < 6 && d != 0)
 	{
@@ -29,7 +29,6 @@ int main(void)
 	{
 		printf("last digit of %d is %d and is 0\n", n, d);
 	}
-	printf("\n");
 	return (0);
 
 }
