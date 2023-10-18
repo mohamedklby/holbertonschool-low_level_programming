@@ -7,10 +7,12 @@
 
 int main(void)
 {
-	char henry;
-	char\s*[a-zA-z]+
+	int henry;
 
 	for (henry = 0; henry < 10; henry++)
-	       putchar(henry + 0);
+	       putchar((henry % 10) + '0');
+
+	putchar('\n');
+
 	return (0);
 }
