@@ -8,15 +8,13 @@
 int main(void)
 {
 	int num;
-	char letter;
+	char lettr;
 
 	for (num = 0; num < 10; num++)
 		putchar((num % 10) + '0');
 
-	for (letter = 'a'; letter <= 'f'; letter++)
-		putchar(letter);
-
+	for (lettr = 'a'; lettr <= 'f'; lettr++)
+		putchar(lettr);
 	putchar('\n');
-
 	return (0);
 }
