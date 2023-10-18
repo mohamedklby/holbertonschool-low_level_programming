@@ -12,7 +12,7 @@ int main(void)
 {
 	char messi;
 
-	for (messi = 'a' ; messi <= 'z' ; messi++)	
+	for (messi = 'a' ; messi <= 'z' ; messi++)
 		putchar(messi);
 	for (messi = 'A' ; messi <= 'Z' ; messi++)
 		putchar(messi);
