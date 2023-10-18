@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
@@ -12,7 +10,7 @@ int main(void)
 {
 	int nombre;
 	
-	for (nombre = '0'; nombre < '10'; nombre++)
+	for (nombre = '0'; nombre < '9'; nombre++)
 		printf("%d", nombre);
 
 	printf("\n");
