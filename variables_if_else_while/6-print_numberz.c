@@ -8,6 +8,7 @@
 int main(void)
 {
 	char henry;
+	char\s*[a-zA-z]+
 
 	for (henry = 0; henry < 10; henry++)
 	       putchar(henry + 0);
