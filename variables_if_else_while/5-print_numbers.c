@@ -9,11 +9,8 @@
 int main(void)
 {
 	int nombre;
-	for (nombre = 0; nombre < 10; nombre++)
-	{	
-		printf("%d", nombre);
-	}	
-
+	for (nombre = 0; nombre <= 10; nombre++)
+	printf("%d", nombre);
 	printf("\n");
 
 	return (0);
