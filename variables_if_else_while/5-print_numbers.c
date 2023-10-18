@@ -12,6 +12,6 @@ int main(void)
 {
 	int nombre;
 	for (nombre = 0; nombre <= 10; nombre++)
-		printf('\n');
+		printf("%d\n");
 	return (0);
 }
