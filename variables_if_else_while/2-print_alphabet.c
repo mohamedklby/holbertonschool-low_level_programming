@@ -10,11 +10,12 @@
 
 int main()
 {
-	char lettre;
+	char alpha;
 
-	for (lettre = 'a' ; lettre <= 'z' ; lettre++)
+	for (alpha = 'a' ; alpha <= 'z' ; alpha++)
 	{
-		putchar(lettre);
-	putchar("\n");
+	putchar(alpha);
+	}
+	putchar('\n');
 	return (0);
 }
