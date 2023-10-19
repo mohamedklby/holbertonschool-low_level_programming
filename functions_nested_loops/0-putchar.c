@@ -1,17 +1,22 @@
 #include <stdio.h>
 
 /**
- * main - program that prints _putchar.c
+ * main - program that prints _putchar
  *
  * Return: Always 0
  */
 
 int main(void)
 {
-	int _putchar.c;
+	int _putchar;
 
-	printf("_putchar.c\n")
-	printf("_putchar.c");
-
-	return 0;
+	putchar("_");
+	putchar("p");
+	putchar("u");
+	putchar("t");
+	putchar("c");
+	putchar("h");
+	putchar("a");
+	putchar("r");
+	return (0);
 }
