@@ -6,12 +6,16 @@
  * Return: always 0
  */
 
-void print_alphabet(void);
-{	
+void prints_alphabet(void);
+
+{
 	char alphabet;
 
-		for (alphabet = 'a'; alphabet = 'z'):
+	for (alphabet = 'a'; alphabet = 'z')
+	{
+
 		putchar(alphabet);
-		putchar('\n')
-	return (0);
+
+	}
+		putchar('\n');
 }
