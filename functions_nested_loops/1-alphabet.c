@@ -8,14 +8,14 @@
 
 void prints_alphabet(void);
 
-(
+{
 	char alphabet;
 
 	for (alphabet = 'a'; alphabet = 'z')
 	{
 
-		putchar(alphabet);
+		8putchar(alphabet);
 
 	}
 		putchar('\n');
-		)
+}
