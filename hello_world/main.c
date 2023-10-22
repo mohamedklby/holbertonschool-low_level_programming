@@ -6,6 +6,6 @@
  * Return: Always 0 (Success)
  */
 int main(void) {
-	printf(bonjour, Mbappe!);
+	printf
     return (0);
 }
