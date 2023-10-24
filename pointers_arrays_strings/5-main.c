@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <sring.h>
 
 /**
  * main - check the code
