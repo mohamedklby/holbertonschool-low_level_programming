@@ -13,7 +13,9 @@ void _puts(char *str)
 
 	vip = 0;
 	while (str[vip] != '\0')
+	{
 		_putchar(str[vip]);
-	vip++;
+		vip++;
+	}
 	putchar ('\n');
 }
