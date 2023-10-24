@@ -2,18 +2,18 @@
 #include <stdio.h>
 
 /**
- * _puts - function that prints a string, followed by a new line.
+ * _puts - prints a string, followed by a new line.
  * @str : string to print
- * Return: i
+ * Return: nothing
  */
 
 void _puts(char *str)
 {
 	int vip;
 
-	l = 0;
-	while (vip[l] != '\0')
-		_putchar(vip[l]);
-	l++;
+	vip = 0;
+	while (str[vip] != '\0')
+		_putchar(str[vip]);
+	vip++;
 	putchar ('\n');
 }
