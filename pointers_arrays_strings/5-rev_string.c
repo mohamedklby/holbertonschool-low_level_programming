@@ -1,10 +1,9 @@
 #include "main.h"
 #include <stdio.h>
 
-
 /**
  * rev_string - Write a function that reverses a strling.
- * @s: string to be reversed 
+ * @s: string to be return 
  * Return: nothing
  */
 
