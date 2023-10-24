@@ -3,8 +3,8 @@
 #include <string.h>
 
 /**
- * rev_string - Write a function that reverses a string.
- * @s: a fonction to reverse
+ * rev_string - Write a function that reverses a strling.
+ * @s: string to be reversed 
  * Return: nothing
  */
 
