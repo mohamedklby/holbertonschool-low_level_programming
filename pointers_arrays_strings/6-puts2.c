@@ -18,4 +18,4 @@ if (lettre % 2 == 0)
 _putchar(str[lettre]);
 }
 _putchar('\n');
-} 
+}
