@@ -1,2 +1,5 @@
 #!/bin/bash
-puts("Programming is like building a multilingual puzzle\n")
+int main(void) {
+	puts("hello");
+	return 0;
+}
