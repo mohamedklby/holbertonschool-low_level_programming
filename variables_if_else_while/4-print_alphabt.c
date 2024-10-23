@@ -3,21 +3,18 @@
 /**
  * main - Entry point
  *
- * Return: Always (0)
+ * Return: Always 0 (Success)
  *
- **/
+ */
 
 int main(void)
-
 {
-	char rav;
+	char letter;
 
-	for (rav = 'a'; rav <= 'z'; rav++)
-	{
-		if (rav != 'q' && != 'e')
+	for (letter = 'a'; letter <= 'z'; letter++)
+		if (letter != 'q' && 'e')
+			putchar(letter);
 
-			putchar (rav);
-	}
 	putchar('\n');
 
 	return (0);
