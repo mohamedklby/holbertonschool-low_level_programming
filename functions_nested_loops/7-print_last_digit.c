@@ -1,6 +1,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include "main.h"
+#include <limits.h>
 
 /**
  * print_last_digit - Affiche et retourne le dernier chiffre d'un nombre
@@ -15,11 +16,21 @@
 
 int print_last_digit(int number)
 {
+	int last_digit;
+	char c;
 
-	int last_digit = abs(number) % 10;
-	char c = last_digit + '0';
+	if (number == INT_MIN)
+	{
+		last_digit = 8;
+		write(1, "8", 1);
 
+	} else
+
+	{
+		last_digit = abs(number) % 10;
+		c = last_digit + '0';
 		write(1, &c, 1);
+	}
 
 	return (last_digit);
 }
