@@ -3,19 +3,21 @@
 #include "main.h"
 
 /**
- * print_sign - affiche le signe d'un nombre
+ * print_sign - verifie le signe d'un nombre
  *
- * @n L'entier dont le signe est a verifier
+ * write_char - Affiche un caractere sur la sortie standard
+ * @c: le caractere a afficher
  *
- * write_char - writes a character to standard output
- *
- * @c: the character to write
+ * Description : Cette fonction verifie si le nombre est positf,
+ * negatif ou zero. Elle affiche '+' pour les nombre positifs, '
+ * -' pour les nombres negatif et '0' pour zero. Elle retourne 1
+ * pour les positifs, -1 pour les negatifs et 0 pour zero
  *
  */
 
-void write_char(char c)
+void write_char(char c);
 {
-	write(1, &c, 1);
+	write_char(1, &c, 1);
 }
 
 int print_sign(int n)
