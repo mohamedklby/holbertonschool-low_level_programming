@@ -3,14 +3,19 @@
 #include "main.h"
 
 /**
+ * print_sign - affiche le signe d'un nombre
+ *
+ * @n L'entier dont le signe est a verifier
+ *
  * write_char - writes a character to standard output
+ *
  * @c: the character to write
+ *
  */
 
 void write_char(char c)
-
 {
-	write(1, &c, 1;)
+	write(1, &c, 1);
 }
 
 int print_sign(int n)
