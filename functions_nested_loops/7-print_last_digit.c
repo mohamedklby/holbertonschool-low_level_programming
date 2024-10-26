@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include "main.h"
 
@@ -17,6 +17,9 @@ int print_last_digit(int number)
 {
 
 	int last_digit = abs(number) % 10;
-		printf("%d", last_digit);
+	char c = last_digit + '0';
+
+		write(1, &c, 1);
+
 	return (last_digit);
 }
