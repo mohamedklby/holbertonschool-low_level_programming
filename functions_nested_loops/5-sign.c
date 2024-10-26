@@ -7,13 +7,13 @@
  * @c: the character to write
  */
 
-void write_char(char c);
+void write_char(char c)
 
 {
-	write(1, &c, 1);
+	write(1, &c, 1;)
 }
 
-int print_sign(int n);
+int print_sign(int n)
 
 {
 	if (n > 0)
