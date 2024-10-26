@@ -17,9 +17,14 @@ void jack_bauer(void)
 	{
 		for (minute = 0; minute < 60; minute++)
 		{
-			snprintf(buffer, sizeof(buffer), "%02d:%02d", hour, minute);
-			write(1, buffer, 5);
-			write(1, "\n", 1);
+			buffer[0] = (hour / 10) + '0';
+			buffer[1] = (hour % 10) + '0';
+			buffer[2] = ':';
+			buffer[3] = (minute / 10) + '0';
+			buffer[4] = (minute % 10) + '0';
+			buffer[5] = '\n';
+
+			write(1, buffer, 6);
 		}
 	}
 }
