@@ -2,20 +2,19 @@
 #include <stdio.h>
 
 /**
- * mul - multiplies deux entiers
+ * mul - vérifie si un caractère est en majuscule
  * @a: le premier entier
- * @b: le deuxi�me entier
+ * @b: le deuxième entier
  *
- * Return: always 0 (Success)
+ * Return: a et b
  */
 
 int mul(int a, int b)
 {
-	a = 784 * 128;
-	printf("Cas 1 : %d\n", a);
 
-	b = -1024 * 1608;
-	printf("Cas 2 : %d\n", b);
+	{       return a * b;
 
+	}
+	printf("%d\n", mul(98, 1024));
 	return (0);
 }
