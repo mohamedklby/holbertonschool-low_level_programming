@@ -12,8 +12,8 @@
 int mul(int a, int b)
 {
 
-	printf("%d\n", 784 * 128);
-	printf("%d\n", -1024 * 1608);
+	printf("Cas 1 : %d\n", 784 * 128);
+	printf("Cas 2 : %d\n", -1024 * 1608);
 
 		return (a && b);
 
