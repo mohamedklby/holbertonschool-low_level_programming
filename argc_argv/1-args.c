@@ -1,19 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - function to print all arguments being passed
- * @argc: argument numbers
- * @argv: arguments passed
+ * main - function to print file name
+ * @argc: count of the arguments supplied to the program and the
+ * @argv: an array of pointers to the strings
  * Return: Always 0
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int a;
-
-	for (a = 0; a < argc; a++)
-	{
-		printf("%s\n", argv[a]);
-	}
+	if (argc > 0)
+		printf("%s\n", argv[0]);
 	return (0);
 }
