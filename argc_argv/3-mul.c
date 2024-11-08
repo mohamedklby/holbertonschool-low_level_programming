@@ -1,30 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 
 /**
- * main - function to add variables
+ * main - function to print multiplication result
  * @argc: number of arguments
- * @argv: arguments being passed
- * Return: Always 0 or 1
+ * @argv: arguments supplied
+ * Return: always 1 if less than two arg var supplied otherwise 0.
  */
-
 int main(int argc, char **argv)
 {
-	int a, b, addition;
+	int a = 0, b = 0;
 
-	for (a = 1; a < argc; a++)
+	if (argc > 2)
 	{
-		for (b = 0; argv[a][b] != '\0'; b++)
-		{
-			if (!isdigit(argv[a][b]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-		}
-		addition = addition + atoi(argv[a]);
+		a = atoi(argv[1]);
+		b = atoi(argv[2]);
+		printf("%d\n", a * b);
 	}
-	printf("%i\n", addition);
+	else
+	{
+		printf("Error\n");
+	}
 	return (0);
 }
