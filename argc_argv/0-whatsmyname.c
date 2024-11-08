@@ -1,14 +1,15 @@
 #include <stdio.h>
 
 /**
- * main - function
- * @argc: number of arguments passed
+ * main - function to print file name
+ * @argc: count of the arguments supplied to the program and the
+ * @argv: an array of pointers to the strings
  * Return: Always 0
- * @argv: arguments passed here
  */
 
-int main(int argc, char __attribute__((unused)) *argv[])
+int main(int argc, char *argv[])
 {
-	printf("%d\n", argc - 1);
+	if (argc > 0)
+		printf("%s\n", argv[0]);
 	return (0);
 }
