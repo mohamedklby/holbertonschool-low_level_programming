@@ -2,27 +2,34 @@
 #include <stdlib.h>
 
 /**
- * create_array - cr√er une matrice de caract√re
+ * create_array - Cr√©e un tableu et l'initialise
+ * @taille: La taille du tableau
+ * @c: caract√®re utilis√© pour initialiser chaque √©l√©ment du tableau.
  *
- * @size: taille de la matrice.
- * @c: premi√re variable
- *
- * Return: array
+ * Return: Un pointeur vers le tableau
  */
 
-char *create_array(unsigned int size, char c)
+char *create_array(unsigned int taille, char c)
 {
-	if (size == 0) {
-		return NULL;
+	char *tableau;
+	unsigned int i;
+
+	if (taille == 0)
+	{
+		return (NULL);
 	}
 
-	char *array = (char *)malloc(size * sizeof(char));
+	tableau = (char *)malloc(taille * sizeof(char));
 
-		if (array == NULL) {
-			return (NULL);
+	if (tableau == NULL)
+	{
+		return (NULL);
 	}
-		for (unsigned int i = 0; i < size; i++) {
-		array[i] = c;
+
+	for (i = 0; i < taille; i++)
+	{
+		tableau[i] = c;
 	}
-	return (array);
+
+	return (tableau);
 }
