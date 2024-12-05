@@ -12,14 +12,14 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_node;  /* Pointeur vers le nouveau nœud */
-	char *duplicated_str;  /* Pointeur pour la chaîne dupliquée */
+	list_t *new_node;
+	char *duplicated_str;
 
-	/* Dupliquer la chaîne str */
 	duplicated_str = strdup(str);
 	if (duplicated_str == NULL)
-		return (NULL);  /* Si la duplication échoue, etourner NULL */
-
+	{
+		return (NULL);
+	}
 	/* Allouer de la mémoire pour le nouveau nœud */
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
@@ -27,7 +27,6 @@ list_t *add_node(list_t **head, const char *str)
 		free(duplicated_str);
 		return (NULL);
 	}
-
 	/* Initialiser les champs du nouveau nœud */
 	new_node->str = duplicated_str;
 	new_node->len = strlen(str);
@@ -35,6 +34,6 @@ list_t *add_node(list_t **head, const char *str)
 
 	*head = new_node;
 
-	return (new_node);  /* Retourner l'adresse du nouveau nœud */
+	return (new_node);
 }
 
