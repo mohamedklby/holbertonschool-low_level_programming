@@ -29,7 +29,6 @@ list_t *add_node(list_t **head, const char *str)
 	}
 	/* Initialiser les champs du nouveau nœud */
 	new_node->str = duplicated_str;
-	new_node->len = strlen(str);
 	new_node->next = *head;
 
 	*head = new_node;
