@@ -18,20 +18,20 @@ list_t *add_node(list_t **head, const char *str)
 	/* Dupliquer la chaîne str */
 	duplicated_str = strdup(str);
 	if (duplicated_str == NULL)
-		return (NULL);  /* Si la duplication échoue, retourner NULL */
+		return (NULL);  /* Si la duplication échoue, etourner NULL */
 
 	/* Allouer de la mémoire pour le nouveau nœud */
 	new_node = malloc(sizeof(list_t));
 	if (new_node == NULL)
 	{
-		free(duplicated_str);  /* Libérer la chaî en cas d'échec d'allocation */
-		return (NULL);  /* Si l'allocation échoue, returner NULL */
+		free(duplicated_str);
+		return (NULL);
 	}
 
 	/* Initialiser les champs du nouveau nœud */
-	new_node->str = duplicated_str; /* Affecter la chaîne dupliquée */
+	new_node->str = duplicated_str;
 	new_node->len = strlen(str);
-	new_node->next = *head; /* Le prochain nœud pointe vers l'ancienne tête */
+	new_node->next = *head;
 
 	*head = new_node;
 
