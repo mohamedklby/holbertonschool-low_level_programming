@@ -10,7 +10,8 @@
 
 size_t print_list(const list_t *h)
 {
-	size_t count = 0;  /*Compteur pour le nombre de nœuds*/
+	size_t count = 0;
+
 	/* Parcours de la liste */
 	while (h != NULL)
 	{
