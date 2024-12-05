@@ -7,10 +7,9 @@
  *
  * Return: Le nombre de nœuds dans la liste.
  */
-
 size_t print_list(const list_t *h)
 {
-	size_t count = 0;  /* Compteur de nœuds */
+	size_t count = 0;  /* Compteur pour le nombre de nœuds */
 
 	/* Parcours de la liste */
 	while (h != NULL)
@@ -20,30 +19,15 @@ size_t print_list(const list_t *h)
 		{
 			printf("[0] (nil)\n");
 		}
-		else
+		else  /* Sinon, on affiche la longueur et la chaîne */
 		{
-			/* Affichage de la longueur de la chaîne suivie de la chaîne elle-même */
-			unsigned int len = 0;  /* Utilisation d'un unsigned int pour la longueur */
-			const char *str_ptr = h->str;
-
-			/* Calcul de la longueur de la chaîne */
-			while (*str_ptr != '\0')
-			{
-				len++;
-				str_ptr++;
-			}
-
-			/* Affichage de la longueur et de la chaîne */
-			printf("[%u] %s\n", len, h->str);  /* Utilisation de %u pour unsigned int */
+			printf("[%u] %s\n", h->len, h->str);  /* Utilisation de %lu pour size_t */
 		}
 
-		h = h->next;  /* Passage au nœud suivant */
-		count++;      /* Incrémenter le compteur de nœuds */
+		h = h->next;  /* Avance au nœud suivant */
+		count++;      /* Incrémente le compteur de nœuds */
 	}
 
-	/* Affichage du nombre d'éléments dans la liste */
-	printf("-> %u elements\n", (unsigned int)count);
-
-	return (count);  /* Retourner le nombre de nœuds */
+	return (count);  /* Retourne le nombre de nœuds */
 }
 
