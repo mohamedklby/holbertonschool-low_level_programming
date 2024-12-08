@@ -1,42 +1,42 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <string.h>
-
 /**
- * add_node - Ajoute un nouveau nœud au début d'une liste_t.
- * @head: Pointeur vers le pointeur de la tête de la liste.
- * @str: Chaîne de caractères à ajouter.
+ * add_node - Adds a new node at the beginning of a list.
+ * @head: Pointer to the head of the list.
+ * @str: String to be added.
  *
- * Return: L'adresse du nouveau nœud, ou NULL en cas d'échec.
+ * Return: Returns the address of the new element, or NULL if failed.
+ *
+ * Steps:
+ * 1. Allocate memory for a new node.
+ * 2. If the allocation fails, return NULL.
+ * 3. Copy the string into a new buffer.
+ * 4. If the string copy fails, free the new node and return NULL.
+ * 5. Compute the length of the string.
+ * 6. Set the new node's next pointer to point to the current head of the list.
+ * 7. Set the head of the list to point to the new node.
+ * 8. Return a pointer to the new node.
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *new_node;
-	char *duplicated_str;
+	char *dup;
+	int len;
+	list_t *new;
 
-	/* Dupliquer la chaîne de caractères */
-	duplicated_str = strdup(str);
-	if (duplicated_str == NULL)  /* Vérifier si strdup a échoué */
+	new = malloc(sizeof(list_t));
+
+	if (new == NULL)
+		return (NULL);
+	dup = strdup(str);
+	if (dup == NULL)
 	{
+		free(new);
 		return (NULL);
 	}
-
-	/* Allouer de la mémoire pour le nouveau nœud */
-	new_node = malloc(sizeof(list_t));
-	if (new_node == NULL)  /* Vérifier si malloc a échoué */
-	{
-		free(duplicated_str);  /* Libérer la mémoire allouée pour la chaîne */
-		return (NULL);
-	}
-
-	/* Initialiser les champs du nouveau nœud */
-	new_node->str = duplicated_str;
-	new_node->len = strlen(str);  /* Stocker la longueur de la chaîne */
-	new_node->next = *head;  /* Le prochain nœud sera l'ancien premier nœud */
-
-	/* Mettre à jour la tête de la liste pour pointer vers le nouveau nœud */
-	*head = new_node;
-
-	return (new_node);  /* Retourner l'adresse du nouveau nœud */
+	for (len = 0; str[len];)
+		len++;
+	new->str = dup;
+	new->len = len;
+	new->next = *head;
+	*head = new;
+	return (new);
 }
-
